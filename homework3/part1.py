@@ -4,6 +4,7 @@ Kevin Peterson
 SEng 5811 
 Homework #3
 Part 1
+https://github.com/kevinpeterson/SEng-5811/blob/master/homework3/part1.py
 ##############
 '''
 
@@ -44,6 +45,13 @@ def _is_visited(node,path,visits):
         return False
 
 def find_paths(start,graph,visits,path=[]):
+    '''Recursively look for paths through the graph.
+       The 'visits' param will allow for more than one
+       visit of a node during path scan. This is used
+       to simulate looping. If a node is not mentioned
+       in 'visits,' it is assumed it can be visited
+       only once.
+    '''
     if start not in graph:
         return [[start]]
     else:

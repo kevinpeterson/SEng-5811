@@ -4,6 +4,7 @@ Kevin Peterson
 SEng 5811 
 Homework #3
 Part 2
+https://github.com/kevinpeterson/SEng-5811/blob/master/homework3/part2.py
 ##############
 
 '''  
@@ -99,6 +100,7 @@ for test_predicate in test_predicates:
 print('(b)')
 
 def test_eval(first,second,third,fourth,fifth,a,b,c,p,r,s):
+    '''Construct and eval a given permutation of the predicate'''
     return eval("((a + b) %s c %s %s p) %s (r %s s)" % (first, second, third, fourth, fifth))
 
 and_or = ['and', 'or']
