@@ -65,11 +65,11 @@ def find_paths(start,graph,visits,path=[]):
                 
         return paths
     
-print "(a) Paths:"           
+print "(a) Paths (one loop):"           
 for path in find_paths('0',graph,{'4':1}): 
-    print "->".join(str(p) for p in path)
+    print " -> ".join(str(p) for p in path)
     
-print "\n(b) Paths:"          
+print "\n(b) Paths (two loops):"          
 for path in find_paths('0',graph,{'4':2,'5':1}): 
     print " -> ".join(str(p) for p in path)
     
@@ -106,6 +106,9 @@ cover_paths = _get_cover_sets(graph_nodes,paths)
       
 print "\n(c) Test Coverage:"
 print "There are %i path(s) that will cover all nodes in the graph: " % len(cover_paths)
+print "So that number of test(s) would be the minimum."
+
+print "\nNode covering path(s) are:"
 for cover_path in cover_paths:
     print " -> ".join(str(p) for p in cover_path)
 
